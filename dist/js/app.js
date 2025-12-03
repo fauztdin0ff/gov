@@ -238,43 +238,6 @@ flsFunctions.phoneMask(); */
 
 
 /*==========================================================================
-Lang panel
-============================================================================*/
-document.addEventListener('DOMContentLoaded', () => {
-   const lang = document.querySelector('.header__lang');
-   const button = lang.querySelector('.header__lang-btn');
-   const list = lang.querySelector('.header__lang-menu');
-
-   function openLang() {
-      list.classList.add('show');
-      button.classList.add('active');
-   }
-
-   function closeLang() {
-      list.classList.remove('show');
-      button.classList.remove('active');
-   }
-
-   lang.addEventListener('mouseenter', openLang);
-   lang.addEventListener('mouseleave', closeLang);
-
-   button.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (list.classList.contains('show')) {
-         closeLang();
-      } else {
-         openLang();
-      }
-   });
-
-   document.addEventListener('click', (e) => {
-      if (!lang.contains(e.target)) {
-         closeLang();
-      }
-   });
-});
-
-/*==========================================================================
 Accordion
 ============================================================================*/
 const accordionItems = document.querySelectorAll('.service__accordion-item');
